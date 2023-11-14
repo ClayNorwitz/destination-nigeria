@@ -16,7 +16,7 @@ const config: Config = {
         "dn-green": "#48A155",
         "dn-dark-green": "#2C6830",
         "dn-mint": "#55BB7C",
-        "dn-orange": "#F08E35",
+        "dn-orange": "#ff8f00",
         "dn-charcoal": "#251F20",
         "dn-beige": "#F0F0F0",
       },

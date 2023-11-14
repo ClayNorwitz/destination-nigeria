@@ -32,5 +32,35 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100vh;
+}
+
+.nigeria-everywhere-image {
+  background-image: url("/img/nigeria-everywhere-image.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 80vh;
+}
+
+@media screen and (max-width: 1024px) {
+  .nigeria-everywhere-image {
+    background-image: url("/img/nigeria-everywhere-image.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nigeria-everywhere-image {
+    background-image: url("/img/nigeria-everywhere-image.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60vh;
+  }
 }
