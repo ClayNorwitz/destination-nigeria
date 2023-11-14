@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import styles from "@/app/styles";
+import { useState } from "react";
 
 type SocialIconProps = React.SVGProps<SVGSVGElement>;
 
@@ -76,9 +78,23 @@ const navigation: { social: SocialItem[] } = {
 };
 
 export default function Hero() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyClick = () => {
+    const urlToCopy = window.location.href;
+
+    navigator.clipboard
+      .writeText(urlToCopy)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000); // Display "copied to clipboard" for 2 seconds
+      })
+      .catch((err) => console.error("Error copying to clipboard:", err));
+  };
+
   return (
     <div className="hero-image h-screen">
-      <div className="h-full flex flex-col  justify-center">
+      <div className="h-full flex flex-col justify-center">
         <div className="grid grid-cols-4 pt-20">
           <div className="col-span-1 bg-dn-green w-fit lg:pl-10 h-full lg:flex items-center hidden ">
             <ul
@@ -111,58 +127,48 @@ export default function Hero() {
               alt="Picture green and orange pattern"
             />
           </div>
-          <div className="col-span-full lg:col-start-4 lg:col-end-5 flex items-center justify-center space-x-6 py-10">
-            <div className="h-px w-1/3 2xl:w-1/2 bg-white"></div>
-            <div className="flex space-x-4 lg:order-2">
-              {navigation.social.map((item) => (
-                <a key={item.name} href={item.href} className="text-white">
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
-                </a>
-              ))}
+        </div>
+        <div className="col-span-full  flex items-center justify-center space-x-6 pt-20">
+          <div className="h-px w-1/5 bg-white"></div>
+          <div className="flex space-x-4 items-center">
+            {navigation.social.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-white bg-white/10 p-2 rounded-md"
+              >
+                <span className="sr-only">{item.name}</span>
+                <item.icon className=" h-6 w-6" aria-hidden="true" />
+              </a>
+            ))}
+            <div
+              className="bg-white/10 p-2 rounded-md relative cursor-pointer"
+              onClick={handleCopyClick}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                />
+              </svg>
+              {copied && (
+                <span
+                  className={`bg-white/10 w-48 justify-center text-white absolute ring-1 ring-white ${styles.paragraph} flex translate-y-10 ease-in-out transition-all top-0 left-1/2 -translate-x-1/2`}
+                >
+                  copied to clipboard!
+                </span>
+              )}
             </div>
           </div>
-        </div>
-        <div className="flex items-center justify-center">
-          <form className="w-full max-w-3xl p-4 lg:p-0">
-            <div className="flex gap-4 flex-col md:flex-row">
-              <label htmlFor="full-name" className="sr-only">
-                Full name
-              </label>
-              <input
-                id="full-name"
-                name="name"
-                type="name"
-                autoComplete="name"
-                required
-                className={`min-w-0 flex-auto rounded-lg border-0 uppercase placeholder:text-gray-200/50 bg-white/10 px-3.5 py-2 ring-1 ring-gray-200/50 text-white shadow-sm focus:outline-none focus:ring-0 focus:ring-offset-0 font-poppins placeholder:font-bold`}
-                placeholder="Your name"
-              />
-              <label htmlFor="email-address" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="email-address"
-                name="email"
-                type="email"
-                autoComplete="email"
-                required
-                className={`min-w-0 flex-auto rounded-lg border-0 uppercase placeholder:text-gray-200/50 bg-white/10 px-3.5 py-2 ring-1 ring-gray-200/50 text-white shadow-sm focus:outline-none focus:ring-0 focus:ring-offset-0 font-poppins placeholder:font-bold`}
-                placeholder="Enter your email"
-              />
-              <button
-                type="submit"
-                className="flex-none rounded-lg bg-dn-orange uppercase font-poppins font-bold px-3.5 py-2.5   text-white shadow-sm  focus:outline-none"
-              >
-                Sign up to our newsletter
-              </button>
-            </div>
-            <p className="mt-2 font-poppins text-[0.7rem] text-gray-200/50">
-              All your information will be kept confidential and we’ll only send
-              you the latest updates, news and events that are happening in our
-              city.
-            </p>
-          </form>
+          <div className="h-px w-1/5 bg-white"></div>
         </div>
       </div>
     </div>

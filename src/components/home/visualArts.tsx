@@ -7,7 +7,7 @@ export default function VisualArts() {
       <div
         className={`grid grid-cols-2 items-center py-24  ${styles.boxWidth}`}
       >
-        <div className="col-span-2 lg:col-span-1 flex lg:justify-center ">
+        <div className="col-span-2 lg:col-span-1 flex lg:justify-center">
           <div className="bg-dn-mint h-full  w-1/4 absolute top-0 left-0"></div>
 
           <div className="relative  ">
@@ -23,7 +23,7 @@ export default function VisualArts() {
           <h2
             className={`${styles.paragraphBold} mb-6 uppercase text-4xl text-dn-dark-green lg:text-dn-green`}
           >
-            Centre of visaul arts
+            Centre of visual arts
           </h2>
           <div className="space-y-6">
             <p className={`${styles.paragraph}  text-black`}>
