@@ -91,7 +91,7 @@ export default function Hero() {
               <li>05</li>
             </ul>
           </div>
-          <div className="col-span-4 lg:col-span-2 pt-4 p-4 lg:p-0">
+          <div className="col-span-4 lg:col-span-2  p-4 lg:p-0 lg:pt-4">
             <h1
               className={`${styles.h1} !mb-0 text-white text-right md:!text-[10rem] md:!leading-[8rem]`}
             >
