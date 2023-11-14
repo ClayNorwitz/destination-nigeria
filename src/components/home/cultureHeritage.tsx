@@ -113,9 +113,8 @@ export default function CultureHeritage() {
         </div>
         <div className="col-span-3 lg:col-span-1 relative pt-16 lg:pt-0">
           <h2 className={`${styles.h2}  text-dn-charcoal`}>
-            {" "}
             <span className="block lg:!text-[9rem] !text-[7rem] !leading-[5rem] lg:!leading-[8rem] text-dn-dark-green">
-              Nigeria's
+              Nigeria&apos;s
             </span>
             cultural heritage
           </h2>
@@ -127,7 +126,7 @@ export default function CultureHeritage() {
             </p>
             <p className={`${styles.paragraph}  text-black`}>
               with numerous talented creators exporting cultural assets
-              worldwide. Nigeria’s cultural heritage inspires the creative
+              worldwide. Nigeria&apos;s cultural heritage inspires the creative
               economy, provides livelihoods for communities, and offers
               boundless potential.
             </p>
