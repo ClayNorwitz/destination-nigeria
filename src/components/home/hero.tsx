@@ -30,7 +30,7 @@ const navigation: { social: SocialItem[] } = {
     },
     {
       name: "X",
-      href: "https://www.linkedin.com/company/destination-2030-nigeria/about/?viewAsMember=true",
+      href: "https://twitter.com/NigeriaDes2030",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 90 90" {...props}>
           <path
@@ -151,6 +151,7 @@ export default function Hero({ setOpen }: HeroProps) {
             <div className="flex space-x-4 items-center ">
               {navigation.social.map((item) => (
                 <a
+                  target="_blank"
                   key={item.name}
                   href={item.href}
                   className="text-white bg-white/10 p-2 rounded-md"
