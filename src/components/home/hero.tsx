@@ -91,7 +91,7 @@ export default function Hero({ setOpen }: HeroProps) {
   const [copied, setCopied] = useState(false);
   const containerRef = useRef(null);
   const titleRef = useRef(null);
-  const pageRef = useRef(null);
+  const pageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (pageRef.current) {

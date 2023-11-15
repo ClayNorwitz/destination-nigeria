@@ -23,8 +23,9 @@ import { useRouter } from "next/router";
 import ProjectHighlights from "@/components/home/projectHighlights";
 
 // import { useReducer } from "react";
+import { SlideContext } from "../context/SlideContext";
 
-export const SlideContext = createContext(0);
+// export const SlideContext = createContext(0);
 
 const useShareableState = () => {
   const [currentSlide, SetCurrentSlide] = useState(0);

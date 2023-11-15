@@ -60,14 +60,15 @@ export default function ProjectHighlights({ setOpen }: { setOpen: any }) {
             <div className="p-10 space-y-2">
               <p className={`${styles.paragraph} text-black text-sm`}>
                 This Nigerian Destination is a bold step towards celebrating,
-                preserving, and amplifying Nigeria’s rich tapestry of arts,
+                preserving, and amplifying Nigeria&apos;s rich tapestry of arts,
                 culture, and the burgeoning creative economy.
               </p>
               <p className={`${styles.paragraph} text-black text-sm`}>
                 Through a dynamic display of fashion, music, film, contemporary
                 art, photography and culinary art, it will highlight the power
-                of culture and creativity to drive Nigeria's economic growth,
-                foster unity, and promote our unique brand on the global stage.
+                of culture and creativity to drive Nigeria&apos;s economic
+                growth, foster unity, and promote our unique brand on the global
+                stage.
               </p>
               <p
                 className={`${
@@ -76,11 +77,11 @@ export default function ProjectHighlights({ setOpen }: { setOpen: any }) {
                   showFullText ? "opacity-100" : "opacity-0 h-0 overflow-hidden"
                 }`}
               >
-                The venue is much more than just a space; it's a journey.
-                Visitors will be able to experience Nigeria's artistic evolution
-                and diversity through traditional and contemporary art forms.
-                The event will feature top-notch facilities for both formal
-                conferences and spontaneous artistic expressions.
+                The venue is much more than just a space; it&apos;s a journey.
+                Visitors will be able to experience Nigeria&apos;s artistic
+                evolution and diversity through traditional and contemporary art
+                forms. The event will feature top-notch facilities for both
+                formal conferences and spontaneous artistic expressions.
               </p>
               <button
                 className={`${styles.paragraphBold} !text-black text-sm cursor-pointer`}
