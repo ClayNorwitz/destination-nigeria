@@ -38,6 +38,12 @@ export default function ProjectHighlights() {
                 recognised city that offers unparalleled opportunities,
                 infrastructure, and inspiration
               </p>
+              <div className="pt-5">
+                {" "}
+                <button className="flex-none  rounded-sm bg-white/5 uppercase font-poppins font-bold px-3.5 py-2.5 text-dn-blue shadow-sm ring-1 ring-dn-blue hover:bg-dn-blue hover:text-white transition-colors focus:outline-none">
+                  Sign up to our mailing list
+                </button>
+              </div>
             </div>
           </div>
           <div className="bg-white shadow-md border border-dn-beige flex-1">
@@ -77,6 +83,12 @@ export default function ProjectHighlights() {
               >
                 {showFullText ? "Read Less.." : "Read More.."}
               </button>
+              <div className="pt-5">
+                {" "}
+                <button className="flex-none  rounded-sm bg-white/5 uppercase font-poppins font-bold px-3.5 py-2.5 text-dn-blue shadow-sm ring-1 ring-dn-blue hover:bg-dn-blue hover:text-white transition-colors focus:outline-none">
+                  Sign up to our mailing list
+                </button>
+              </div>
             </div>
           </div>
         </div>
