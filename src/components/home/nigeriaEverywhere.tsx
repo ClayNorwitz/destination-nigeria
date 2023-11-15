@@ -7,10 +7,8 @@ export default function NigeriaEverywhere() {
       <div
         className={`flex flex-col justify-center items-center h-full ${styles.boxWidth}`}
       >
-        <h2
-          className={`${styles.h2} 2xl:!text-[7rem] 2xl:!leading-[7rem] text-white text-center`}
-        >
-          Unmistakable culture{" "}
+        <h2 className={`${styles.h2}  text-white text-center`}>
+          Unmistakable culture,
           <span className="block">
             exceptional talent, from nigeria to the world
           </span>
