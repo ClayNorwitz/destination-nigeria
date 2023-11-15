@@ -65,6 +65,7 @@ body {
   }
 }
 
-.clipboard {
-  opacity: 1;
+.stepper-items {
+  text-decoration: line-through;
+  text-decoration-thickness: 0.1rem;
 }

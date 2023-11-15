@@ -81,7 +81,7 @@ const navigation: { social: SocialItem[] } = {
   ],
 };
 
-export default function Hero() {
+export default function HeroTest() {
   const [copied, setCopied] = useState(false);
 
   const handleCopyClick = () => {
