@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { SlideContext } from "@/app/context/slideContext";
+import { SlideContext } from "@/src/context/SlideContext";
 
 function FullpageStepper() {
   let activeStepIndex = useContext(SlideContext);
