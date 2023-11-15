@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { SlideContext } from "@/app/page";
 
 function FullpageStepper() {
@@ -15,9 +15,43 @@ function FullpageStepper() {
       }
     });
   }, [activeStepIndex]);
+
+  const [stepperColour, setStepperColour] = useState("bg-dn-green");
+
+  useEffect(() => {
+    console.log(activeStepIndex);
+    switch (activeStepIndex[0]) {
+      case 0:
+        setStepperColour("bg-dn-green");
+        break;
+      case 1:
+        setStepperColour("bg-dn-red");
+        break;
+      case 2:
+        setStepperColour("bg-dn-orange");
+        break;
+      case 3:
+        setStepperColour("bg-dn-green");
+        break;
+      case 4:
+        setStepperColour("bg-dn-mint");
+        break;
+      case 5:
+        setStepperColour("bg-dn-blue");
+        break;
+      case 6:
+        setStepperColour("bg-dn-orange");
+        break;
+      default:
+        setStepperColour("bg-dn-green");
+    }
+  }, [activeStepIndex]);
+
   return (
     <section className=" pointer-events-none">
-      <ul className="bg-dn-green w-fit pl-10  p-6 flex flex-col   space-y-7 ">
+      <ul
+        className={`${stepperColour} transition-all duration-1000 w-fit pl-10  p-6 flex flex-col   space-y-7 `}
+      >
         <li className="stepper-item  flex items-center justify-center ">
           <span className="text-white font-poppins">01</span>
         </li>
