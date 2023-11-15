@@ -98,8 +98,11 @@ export default function HeroTest() {
 
   return (
     <div className="hero-image h-full">
-      <div className="h-full flex flex-col justify-center">
-        <div className="grid grid-cols-4">
+      <div className="h-full flex flex-col justify-between">
+        {/* Empty Space */}
+        <div className="flex-1"></div>
+        {/* Main Content */}
+        <div className="flex-1 grid grid-cols-4">
           <div className="col-span-1 lg:flex hidden"></div>
           <div className="col-span-4 lg:col-span-2  ">
             <h1
@@ -122,7 +125,8 @@ export default function HeroTest() {
             />
           </div>
         </div>
-        <div className="col-span-full  flex items-center justify-center space-x-6 ">
+        {/* Socials */}
+        <div className=" flex-1 col-span-full  flex items-center justify-center space-x-6 ">
           <div className="h-px w-1/5 bg-white"></div>
           <div className="flex space-x-4 items-center">
             {navigation.social.map((item) => (
@@ -144,7 +148,7 @@ export default function HeroTest() {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
-                stroke="currentColor"
+                stroke="white"
                 className="w-6 h-6"
               >
                 <path
