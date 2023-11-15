@@ -3,34 +3,43 @@ import styles from "@/app/styles";
 
 export default function Vision() {
   return (
-    <div className={`grid grid-cols-6 items-center ${styles.boxWidth}`}>
-      <div className="col-span-6 md:col-span-3 lg:col-span-4">
-        <h2 className={`${styles.h2} text-dn-dark-green`}>
-          Destination 2030 vision:
-        </h2>
-        <div className="space-y-6 max-w-2xl">
-          <p
-            className={`${styles.paragraphBold} text-2xl lg:text-3xl text-dn-mint`}
-          >
-            Nigeria, The world’s culture, creativity and entertainment capital.
-          </p>
-          <p className={`${styles.paragraph}  text-black`}>
-            Nigeria, The world’s culture, creativity and entertainment capital.
-          </p>
+    <div className="h-full w-full destination-vision">
+      <div className={`grid grid-cols-6 items-center h-full `}>
+        <div className="col-span-6 md:col-span-3 pl-40">
+          <h2 className={`${styles.h2} text-white`}>
+            Destination 2030 <span className="text-dn-dark-green">vision:</span>
+          </h2>
+          <div className="space-y-6 max-w-2xl">
+            <p className={`${styles.paragraphBold} text-2xl  text-white`}>
+              Nigeria, The world’s culture, creativity and entertainment
+              capital.
+            </p>
+            <p className={`${styles.paragraph}  text-white`}>
+              Destination 2030, Nigeria is set to establish Nigeria as the
+              leading global hub for arts, culture, and creativity.
+            </p>
+            <p className={`${styles.paragraph}  text-white`}>
+              It is a national strategy with the vision of positioning Nigeria
+              as a leading influence of creative expression and cultural
+              exchange.
+            </p>
+            <p className={`${styles.paragraph}  text-white`}>
+              Accelerating the transformation of the arts, culture and creative
+              economy into a primary force for economic growth and shared
+              prosperity.
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="col-span-6 md:col-span-3 lg:col-span-2 flex items-end justify-end md:pl-10 lg:pl-0">
-        {" "}
-        <div className="space-y-6  2xl:w-3/4">
-          <p className={`${styles.paragraph}  text-black`}>
-            It is a national strategy with the vision of positioning Nigeria as
-            a leading influence of creative expression and cultural exchange.
-          </p>
-          <p className={`${styles.paragraph}  text-black`}>
-            Accelerating the transformation of the arts, culture and creative
-            economy into a primary force for economic growth and shared
-            prosperity.
-          </p>
+        <div className="col-span-6 md:col-span-3  h-full flex items-center justify-center md:pl-10 lg:pl-0 relative">
+          <div>
+            <Image
+              src="/img/brand-logo-motif.png"
+              width={400}
+              height={484}
+              alt="Picture of a woman covering her eye with her hand"
+              className="relative"
+            />
+          </div>
         </div>
       </div>
     </div>

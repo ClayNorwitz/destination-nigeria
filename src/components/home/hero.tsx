@@ -98,8 +98,11 @@ export default function Hero() {
 
   return (
     <div className="hero-image h-full">
-      <div className="h-full flex flex-col justify-center">
-        <div className="grid grid-cols-4">
+      <div className="h-full flex flex-col justify-between">
+        {/* Empty Space */}
+        <div className="flex-1"></div>
+        {/* Main Content */}
+        <div className="flex-1 grid grid-cols-4">
           <div className="col-span-1 lg:flex hidden"></div>
           <div className="col-span-4 lg:col-span-2  ">
             <h1
@@ -122,47 +125,60 @@ export default function Hero() {
             />
           </div>
         </div>
-        <div className="col-span-full  flex items-center justify-center space-x-6 ">
-          <div className="h-px w-1/5 bg-white"></div>
-          <div className="flex space-x-4 items-center">
-            {navigation.social.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-white bg-white/10 p-2 rounded-md"
-              >
-                <span className="sr-only">{item.name}</span>
-                <item.icon className=" h-6 w-6" aria-hidden="true" />
-              </a>
-            ))}
-            <div
-              className="bg-white/10 p-2 rounded-md relative cursor-pointer"
-              onClick={handleCopyClick}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
-                />
-              </svg>
-              {copied && (
-                <span
-                  className={`bg-white/10 w-48 justify-center text-white absolute ring-1 ring-white ${styles.paragraph} flex translate-y-10 ease-in-out transition-all top-0 left-1/2 -translate-x-1/2`}
-                >
-                  copied to clipboard!
-                </span>
-              )}
-            </div>
+        {/* Socials */}
+        <div className=" flex-1 col-span-full  flex flex-col items-center justify-center ">
+          <div className="pb-5">
+            <p className={`${styles.paragraphBold} text-3xl text-white`}>
+              Follow our journey
+            </p>
           </div>
-          <div className="h-px w-1/5 bg-white"></div>
+          <div className="flex w-full items-center justify-center space-x-6 ">
+            <div className="h-px w-1/5 bg-white"></div>
+            <div className="flex space-x-4 items-center ">
+              {navigation.social.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-white bg-white/10 p-2 rounded-md"
+                >
+                  <span className="sr-only">{item.name}</span>
+                  <item.icon className=" h-6 w-6" aria-hidden="true" />
+                </a>
+              ))}
+              <div
+                className="bg-white/10 p-2 rounded-md relative cursor-pointer"
+                onClick={handleCopyClick}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="white"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                  />
+                </svg>
+                {copied && (
+                  <span
+                    className={`bg-white/10 w-48 justify-center text-white absolute ring-1 ring-white ${styles.paragraph} flex translate-y-10 ease-in-out transition-all top-0 left-1/2 -translate-x-1/2`}
+                  >
+                    copied to clipboard!
+                  </span>
+                )}
+              </div>
+            </div>
+            <div className="h-px w-1/5 bg-white"></div>
+          </div>
+          <div className="pt-5">
+            <button className="flex-none  rounded-sm bg-white/5 uppercase font-poppins font-bold px-3.5 py-2.5 text-white shadow-sm ring-1 ring-white hover:bg-white hover:text-dn-green transition-colors focus:outline-none">
+              Sign up to our newsletter
+            </button>
+          </div>
         </div>
       </div>
     </div>

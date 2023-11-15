@@ -3,7 +3,7 @@ import styles from "@/app/styles";
 
 export default function NigeriaEverywhere() {
   return (
-    <div className="nigeria-everywhere-image">
+    <div className="nigeria-everywhere-image h-full">
       <div
         className={`flex flex-col justify-center items-center h-full ${styles.boxWidth}`}
       >
@@ -16,7 +16,7 @@ export default function NigeriaEverywhere() {
           </span>
         </h2>
         <p
-          className={`${styles.paragraphBold} text-2xl md:text-5xl text-dn-green`}
+          className={`${styles.paragraphBold} text-2xl md:text-5xl text-dn-mint`}
         >
           #NigeriaEverywhere
         </p>

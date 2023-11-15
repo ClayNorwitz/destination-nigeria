@@ -6,16 +6,13 @@ import CultureHeritage from "@/components/home/cultureHeritage";
 import CreativeEconomy from "@/components/home/creativeEconomy";
 import Vision from "@/components/home/vision";
 import NigeriaEverywhere from "@/components/home/nigeriaEverywhere";
-import VisualArts from "@/components/home/visualArts";
-import HomeNewsletter from "@/components/home/homeNewsletter";
 import WeAreNigeria from "@/components/home/weAreNigeria";
-import CreativeCity from "@/components/home/creativeCity";
 import React, { useEffect, useState, createContext, Component } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import FullpageStepper from "../components/fullpageStepper";
 
 import { useRouter } from "next/router";
-import HeroTest from "@/components/home/heroTest";
+import ProjectHighlights from "@/components/home/projectHighlights";
 
 // import { useReducer } from "react";
 
@@ -53,19 +50,25 @@ const FullpageWrapper = ({ SetCurrentSlide }) => {
         return (
           <div className="h-full">
             <FullScreenSection>
-              <HeroTest />
-            </FullScreenSection>
-            <FullScreenSection>
-              {" "}
               <Hero />
             </FullScreenSection>
             <FullScreenSection>
-              {" "}
-              <Hero />
+              <CultureHeritage />
             </FullScreenSection>
             <FullScreenSection>
-              {" "}
-              <Hero />
+              <CreativeEconomy />
+            </FullScreenSection>
+            <FullScreenSection>
+              <Vision />
+            </FullScreenSection>
+            <FullScreenSection>
+              <NigeriaEverywhere />
+            </FullScreenSection>
+            <FullScreenSection>
+              <ProjectHighlights />
+            </FullScreenSection>
+            <FullScreenSection>
+              <WeAreNigeria />
             </FullScreenSection>
           </div>
         );
@@ -81,7 +84,7 @@ export default function Home() {
     <>
       <div className="relative h-full">
         <SlideContext.Provider value={[currentSlide]}>
-          <div className="fixed w-full top-1/2 -translate-y-1/2 z-10  ">
+          <div className="fixed w-fit top-1/2 -translate-y-1/2 z-10  ">
             <FullpageStepper />
           </div>
           <FullpageWrapper

@@ -16,8 +16,8 @@ function FullpageStepper() {
     });
   }, [activeStepIndex]);
   return (
-    <section className="z-10">
-      <ul className="bg-dn-green w-fit pl-10  p-6 flex flex-col  z-10 space-y-7 ">
+    <section className=" pointer-events-none">
+      <ul className="bg-dn-green w-fit pl-10  p-6 flex flex-col   space-y-7 ">
         <li className="stepper-item  flex items-center justify-center ">
           <span className="text-white font-poppins">01</span>
         </li>

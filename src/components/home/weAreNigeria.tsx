@@ -3,16 +3,15 @@ import styles from "@/app/styles";
 
 export default function WeAreNigeria() {
   return (
-    <div
-      className={`py-24 flex flex-col justify-center items-center h-full ${styles.boxWidth}`}
-    >
-      <h2 className={`${styles.h2} !mb-0  text-black text-center`}>
-        We are unmistakable, we are unlimited,{" "}
-        <span className="md:block lg:inline">everywhere we are</span>
-        <span className="block text-dn-dark-green md:!text-[7rem] !text-[4rem] !leading-[4rem] md:!leading-[6rem] 2xl:!leading-[7rem]">
-          we are Nigeria
-        </span>
-      </h2>
+    <div className="bg-dn-orange h-full w-full">
+      <div
+        className={` flex flex-col justify-center items-center h-full max-w-5xl ${styles.boxWidth}`}
+      >
+        <h2 className={`${styles.h2} !mb-0  text-white text-center`}>
+          We are unmistakable, we are unlimited,
+          <span className="block">everywhere we are, we are Nigeria</span>
+        </h2>
+      </div>
     </div>
   );
 }
