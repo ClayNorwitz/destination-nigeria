@@ -81,7 +81,11 @@ const navigation: { social: SocialItem[] } = {
   ],
 };
 
-export default function Hero() {
+type HeroProps = {
+  setOpen: any;
+};
+
+export default function Hero({ setOpen }: HeroProps) {
   const [copied, setCopied] = useState(false);
 
   const handleCopyClick = () => {
@@ -175,7 +179,12 @@ export default function Hero() {
             <div className="h-px w-1/5 bg-white"></div>
           </div>
           <div className="pt-5">
-            <button className="flex-none  rounded-sm bg-white/5 uppercase font-poppins font-bold px-3.5 py-2.5 text-white shadow-sm ring-1 ring-white hover:bg-white hover:text-dn-green transition-colors focus:outline-none">
+            <button
+              onClick={() => {
+                setOpen(true);
+              }}
+              className="flex-none  rounded-sm bg-white/5 uppercase font-poppins font-bold px-3.5 py-2.5 text-white shadow-sm ring-1 ring-white hover:bg-white hover:text-dn-green transition-colors focus:outline-none"
+            >
               Sign up to our newsletter
             </button>
           </div>
