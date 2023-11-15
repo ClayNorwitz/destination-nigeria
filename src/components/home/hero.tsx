@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
 import styles from "@/app/styles";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import useIsomorphicLayoutEffect from "use-isomorphic-layout-effect";
+import { splitTitle, splitText } from "@/utils/gsap";
 
 type SocialIconProps = React.SVGProps<SVGSVGElement>;
 
@@ -83,6 +85,12 @@ const navigation: { social: SocialItem[] } = {
 
 export default function Hero() {
   const [copied, setCopied] = useState(false);
+  const containerRef = useRef(null);
+  const titleRef = useRef(null);
+
+  useIsomorphicLayoutEffect(() => {
+    splitTitle(titleRef, containerRef);
+  }, []);
 
   const handleCopyClick = () => {
     const urlToCopy = window.location.href;
@@ -97,7 +105,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="hero-image h-full">
+    <div ref={containerRef} className="hero-image h-full relative">
       <div className="h-full flex flex-col justify-between">
         {/* Empty Space */}
         <div className="flex-1"></div>
@@ -106,6 +114,7 @@ export default function Hero() {
           <div className="col-span-1 lg:flex hidden"></div>
           <div className="col-span-4 lg:col-span-2  ">
             <h1
+              ref={titleRef}
               className={`${styles.h1} !mb-0 text-white text-right md:!text-[10rem] md:!leading-[8rem] p-4 lg:p-0 lg:pt-4`}
             >
               Nigeria <span className="block">every</span> where

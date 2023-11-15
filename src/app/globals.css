@@ -49,9 +49,41 @@ body {
   background-repeat: no-repeat;
   width: 100%;
 }
+.abuja-city-bg {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.304)
+    ),
+    url("/img/creative-city.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.visual-arts-bg {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.304)
+    ),
+    url("/img/visual-arts.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
 
 .stepper-items {
   text-decoration: line-through;
   text-decoration-thickness: 0.1rem;
   color: white;
+}
+
+.word {
+  clip-path: polygon(0 0, 100% 0, 100% 110%, 0% 110%);
+}
+
+.char {
+  transform: translateY(115px);
+  transition: transform 0.5s;
 }
