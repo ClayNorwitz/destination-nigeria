@@ -18,12 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: white;
 }
 
 .hero-image {
@@ -86,4 +81,63 @@ body {
 .char {
   transform: translateY(115px);
   transition: transform 0.5s;
+}
+
+.fp-watermark {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    background: white;
+  }
+  to {
+    opacity: 1;
+    background: transparent;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes bouncing {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+.bouncing {
+  animation: bouncing 3s ease-in-out alternate-reverse infinite;
+}
+
+@keyframes sliding {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(20px);
+  }
+}
+
+.sliding {
+  animation: sliding 3s ease-in-out alternate-reverse infinite;
+}
+
+@keyframes sliding-alt {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(20px);
+  }
+}
+
+.sliding-alt {
+  animation: sliding-alt 3s ease-in-out alternate-reverse infinite;
+  animation-delay: 1s;
 }

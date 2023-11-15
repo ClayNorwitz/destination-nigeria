@@ -73,7 +73,7 @@ const FullpageWrapper = ({ SetCurrentSlide, setOpen }) => {
               <NigeriaEverywhere />
             </FullScreenSection>
             <FullScreenSection>
-              <ProjectHighlights />
+              <ProjectHighlights setOpen={setOpen} />
             </FullScreenSection>
             <FullScreenSection>
               <WeAreNigeria />

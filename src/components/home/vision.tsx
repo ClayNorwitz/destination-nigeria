@@ -37,7 +37,7 @@ export default function Vision() {
               width={400}
               height={484}
               alt="Picture of a woman covering her eye with her hand"
-              className="relative  "
+              className="relative  bouncing"
             />
           </div>
         </div>

@@ -34,6 +34,7 @@ export default function CreativeEconomy() {
               src="/img/woman-covering-face.jpg"
               width={600}
               height={320}
+              className="bouncing"
               alt="Picture of a woman covering her eye with her hand"
             />
           </div>

@@ -1,19 +1,9 @@
 import Image from "next/image";
 import styles from "@/app/styles";
-import { useRef } from "react";
-import useIsomorphicLayoutEffect from "use-isomorphic-layout-effect";
-import { splitTitle, splitText } from "@/utils/gsap";
 
 export default function CultureHeritage() {
-  const containerRef = useRef(null);
-  const titleRef = useRef(null);
-
-  useIsomorphicLayoutEffect(() => {
-    splitTitle(titleRef, containerRef);
-  }, []);
-
   return (
-    <div ref={containerRef} className="relative bg-white h-full w-full">
+    <div className="relative bg-white h-full w-full">
       <div
         className={`grid grid-cols-2 items-center justify-center h-full  ${styles.boxWidth}`}
       >
@@ -26,18 +16,20 @@ export default function CultureHeritage() {
                 width={500}
                 height={281}
                 alt="Picture of a person singing"
+                className="sliding"
               />
               <Image
                 src="/img/cultural-heritage-1.jpg"
                 width={500}
                 height={281}
                 alt="Picture of a person"
+                className="sliding-alt"
               />
             </div>
           </div>
         </div>
         <div className="col-span-2 lg:col-span-1 relative pt-16 lg:pt-0 pl-20 2xl:pl-40">
-          <h2 ref={titleRef} className={`${styles.h2} !mb-10 text-dn-charcoal`}>
+          <h2 className={`${styles.h2} !mb-10 text-dn-charcoal`}>
             Nigeria&apos;s
             <span className="text-dn-red "> cultural heritage </span>
           </h2>

@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import styles from "@/app/styles";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import useIsomorphicLayoutEffect from "use-isomorphic-layout-effect";
-import { splitTitle, splitText } from "@/utils/gsap";
+import { splitTitle } from "@/utils/gsap";
 
 type SocialIconProps = React.SVGProps<SVGSVGElement>;
 
@@ -91,6 +91,13 @@ export default function Hero({ setOpen }: HeroProps) {
   const [copied, setCopied] = useState(false);
   const containerRef = useRef(null);
   const titleRef = useRef(null);
+  const pageRef = useRef(null);
+
+  useEffect(() => {
+    if (pageRef.current) {
+      pageRef.current.classList.add("fadeIn");
+    }
+  }, []);
 
   useIsomorphicLayoutEffect(() => {
     splitTitle(titleRef, containerRef);
@@ -110,6 +117,10 @@ export default function Hero({ setOpen }: HeroProps) {
 
   return (
     <div ref={containerRef} className="hero-image h-full relative">
+      <div
+        ref={pageRef}
+        className="bg-white fixed pointer-events-none top-0 right-0 w-screen h-screen"
+      ></div>
       <div className="h-full flex flex-col justify-between">
         {/* Empty Space */}
         <div className="flex-1"></div>

@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "@/app/styles";
 import React, { useState } from "react";
 
-export default function ProjectHighlights() {
+export default function ProjectHighlights({ setOpen }: { setOpen: any }) {
   const [showFullText, setShowFullText] = useState(false);
 
   const handleReadMoreClick = () => {
@@ -40,7 +40,12 @@ export default function ProjectHighlights() {
               </p>
               <div className="pt-5">
                 {" "}
-                <button className="flex-none  rounded-sm bg-white/5 uppercase font-poppins font-bold px-3.5 py-2.5 text-dn-blue shadow-sm ring-1 ring-dn-blue hover:bg-dn-blue hover:text-white transition-colors focus:outline-none">
+                <button
+                  onClick={() => {
+                    setOpen(true);
+                  }}
+                  className="flex-none  rounded-sm bg-white/5 uppercase font-poppins font-bold px-3.5 py-2.5 text-dn-blue shadow-sm ring-1 ring-dn-blue hover:bg-dn-blue hover:text-white transition-colors focus:outline-none"
+                >
                   Sign up to our mailing list
                 </button>
               </div>
@@ -85,7 +90,12 @@ export default function ProjectHighlights() {
               </button>
               <div className="pt-5">
                 {" "}
-                <button className="flex-none  rounded-sm bg-white/5 uppercase font-poppins font-bold px-3.5 py-2.5 text-dn-blue shadow-sm ring-1 ring-dn-blue hover:bg-dn-blue hover:text-white transition-colors focus:outline-none">
+                <button
+                  onClick={() => {
+                    setOpen(true);
+                  }}
+                  className="flex-none  rounded-sm bg-white/5 uppercase font-poppins font-bold px-3.5 py-2.5 text-dn-blue shadow-sm ring-1 ring-dn-blue hover:bg-dn-blue hover:text-white transition-colors focus:outline-none"
+                >
                   Sign up to our mailing list
                 </button>
               </div>
