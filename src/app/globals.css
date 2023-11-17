@@ -141,3 +141,32 @@ body {
   animation: sliding-alt 3s ease-in-out alternate-reverse infinite;
   animation-delay: 1s;
 }
+
+.video-container {
+  position: relative;
+  width: 100%; /* or any specific width */
+  height: 100%; /* or any specific height */
+  overflow: hidden;
+}
+
+.video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Puts the video behind the content */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  /* Styles for your content */
+}
