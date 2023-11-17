@@ -136,16 +136,11 @@ export default function Hero({ setOpen }: HeroProps) {
               <span className="block">where</span>
             </h1>
           </div>
-          <div className="hidden lg:col-span-1 bg-dn-green w-full h-full lg:flex items-center justify-center space-x-4">
-            <h3
-              className={`${styles.h3} !mb-0 text-dn-dark-green text-right !leading-[2rem]`}
-            >
-              Destination <span className="block text-white">2030</span> Nigeria
-            </h3>
+          <div className="hidden lg:col-span-1 bg-dn-green w-full h-full lg:flex items-center justify-center p-4">
             <Image
-              src="/img/destination-nigeria-logo.png"
-              width={120}
-              height={154}
+              src="/img/destination-nigeria-logo-green.png"
+              width={328}
+              height={165}
               alt="Picture green and orange pattern"
             />
           </div>
