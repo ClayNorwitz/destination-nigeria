@@ -170,33 +170,36 @@ export default function Home() {
                             <div className="max-w-2xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"></div>
                             <form className="mt-4 max-w-md">
                               <div className="flex gap-x-4">
-                                <label htmlFor="name" className="sr-only">
-                                  Name
-                                </label>
-                                <input
-                                  id="email-address"
-                                  name="name"
-                                  type="text"
-                                  autoComplete="name"
-                                  required
-                                  className={`${styles.paragraph} min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-dn-dark-green sm:text-sm sm:leading-6`}
-                                  placeholder="Full Name"
-                                />
-                                <label
-                                  htmlFor="email-address"
-                                  className="sr-only"
-                                >
-                                  Email address
-                                </label>
-                                <input
-                                  id="email-address"
-                                  name="email"
-                                  type="email"
-                                  autoComplete="email"
-                                  required
-                                  className={`${styles.paragraph} min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-dn-dark-green sm:text-sm sm:leading-6`}
-                                  placeholder="Email Address"
-                                />
+                                <div className="grid grid-cols-2">
+                                  <label htmlFor="name" className="sr-only">
+                                    Name
+                                  </label>
+                                  <input
+                                    id="email-address"
+                                    name="name"
+                                    type="text"
+                                    autoComplete="name"
+                                    required
+                                    className={`${styles.paragraph} col-span-2 md:col-span-1 min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-dn-dark-green sm:text-sm sm:leading-6`}
+                                    placeholder="Full Name"
+                                  />
+                                  <label
+                                    htmlFor="email-address"
+                                    className="sr-only"
+                                  >
+                                    Email address
+                                  </label>
+                                  <input
+                                    id="email-address"
+                                    name="email"
+                                    type="email"
+                                    autoComplete="email"
+                                    required
+                                    className={`${styles.paragraph} col-span-2 md:col-span-1 min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-dn-dark-green sm:text-sm sm:leading-6`}
+                                    placeholder="Email Address"
+                                  />
+                                </div>
+
                                 <button
                                   type="submit"
                                   className={`${styles.paragraph} uppercase flex-none rounded-md bg-dn-dark-green px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-dn-dark-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dn-dark-green`}
@@ -219,6 +222,7 @@ export default function Home() {
           <div className="fixed w-fit top-1/2 -translate-y-1/2 z-10  ">
             <FullpageStepper />
           </div>
+
           <FullpageWrapper
             dotsActive={dotsActive}
             SetCurrentSlide={SetCurrentSlide}

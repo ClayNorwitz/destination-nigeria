@@ -31,9 +31,9 @@ export default function Vision() {
           </div>
         </div>
         <div className="col-span-6 lg:col-span-3  h-full flex items-center justify-center md:pl-10 lg:pl-0 relative">
-          <div>
+          <div className="h-32 w-32 md:h-auto md:w-auto">
             <Image
-              src="/img/brand-logo-motif.png"
+              src="/img/n-image.png"
               width={400}
               height={484}
               alt="Picture of a woman covering her eye with her hand"
