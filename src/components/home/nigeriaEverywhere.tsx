@@ -9,7 +9,7 @@ export default function NigeriaEverywhere() {
       >
         <h2 className={`${styles.h2}  text-white text-center`}>
           Unmistakable culture,
-          <span className="block">
+          <span className="md:block">
             exceptional talent, from nigeria to the world
           </span>
         </h2>
