@@ -5,7 +5,7 @@ export default function NigeriaEverywhere() {
   return (
     <div className="nigeria-everywhere-image h-full">
       <div
-        className={`flex flex-col justify-center items-center h-full w-72 md:w-full ${styles.boxWidth}`}
+        className={`flex flex-col justify-center items-center h-full w-[17rem] md:w-full ${styles.boxWidth}`}
       >
         <h2 className={`${styles.h2}  text-white text-center`}>
           Unmistakable culture,

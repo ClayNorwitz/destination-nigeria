@@ -125,24 +125,28 @@ export default function Hero({ setOpen }: HeroProps) {
         {/* Empty Space */}
         <div className="flex-1"></div>
         {/* Main Content */}
-        <div className="flex-1 grid grid-cols-4">
-          <div className="col-span-1 md:flex hidden"></div>
-          <div className="col-span-4 md:col-span-2 flex justify-end ">
-            <h1
-              ref={titleRef}
-              className={`${styles.h1} !mb-0 text-white text-right  md:!text-[7.3rem] md:!leading-[7rem]  lg:!text-[10rem] lg:!leading-[8rem] p-4 lg:p-0 lg:pt-4 max-w-sm md:max-w-lg`}
-            >
-              Nigeria <span className="block">every</span>
-              <span className="block">where</span>
-            </h1>
-          </div>
-          <div className="hidden md:col-span-1 bg-dn-green w-full h-full md:flex items-center justify-center p-4">
-            <Image
-              src="/img/destination-nigeria-logo-green.png"
-              width={328}
-              height={165}
-              alt="Picture green and orange pattern"
-            />
+        <div className="flex-1 items-center justify-center ">
+          <div className="flex justify-end items-center h-full">
+            <div className="flex w-11/12 md:w-2/3 2xl:w-1/2">
+              <div className="w-full">
+                <h1
+                  ref={titleRef}
+                  className={`${styles.h1} !mb-0 text-white text-right !text-[3rem] !leading-[3rem]  md:!text-[7.3rem] md:!leading-[7rem]  lg:!text-[10rem] lg:!leading-[8rem] py-4 lg:py-0 lg:pt-4 `}
+                >
+                  Nigeria <span className="block">every</span>
+                  <span className="block">where</span>
+                </h1>
+              </div>
+
+              <div className=" bg-dn-green  flex items-center justify-center p-2 md:p-12">
+                <Image
+                  src="/img/destination-nigeria-logo-green.png"
+                  width={328}
+                  height={165}
+                  alt="Picture green and orange pattern"
+                />
+              </div>
+            </div>
           </div>
         </div>
         {/* Socials */}
