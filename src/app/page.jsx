@@ -23,6 +23,7 @@ import { useRouter } from "next/router";
 import ProjectHighlights from "@/components/home/projectHighlights";
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 import * as Yup from "yup";
+import $ from "jquery";
 
 // import { useReducer } from "react";
 import { SlideContext } from "../context/SlideContext";
@@ -110,7 +111,6 @@ export default function Home() {
   const [personalFormSuccess, setPersonalFormSuccess] = useState(false);
 
   const handlePersonalFormSubmit = async (values) => {
-    console.log("VALUES", values);
     setPersonalFormSuccess(false);
     setPersonalFormError(false);
 
@@ -120,51 +120,61 @@ export default function Home() {
       values.b_6b5a75b2e5f0566c42a9780d6_11ab22ccdc;
     const tags = values.tags;
 
-    console.log("TAGS", tags);
+    let formData = {
+      FNAME: firstName,
+      IDEAS: "none",
+      EMAIL: email,
+      b_6b5a75b2e5f0566c42a9780d6_11ab22ccdc:
+        b_6b5a75b2e5f0566c42a9780d6_11ab22ccdc,
+      tags: tags,
+    };
 
-    alert("TAGS", tags);
-    alert(
-      JSON.stringify({
-        FNAME: firstName,
-        EMAIL: email,
-        b_6b5a75b2e5f0566c42a9780d6_11ab22ccdc:
-          b_6b5a75b2e5f0566c42a9780d6_11ab22ccdc,
-        tags: tags,
-      })
-    );
-
-    await fetch(
-      "https://thisisfuture.us12.list-manage.com/subscribe/post?u=6b5a75b2e5f0566c42a9780d6&amp;id=11ab22ccdc&amp;f_id=00904be0f0",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          FNAME: firstName,
-          EMAIL: email,
-          b_6b5a75b2e5f0566c42a9780d6_11ab22ccdc:
-            b_6b5a75b2e5f0566c42a9780d6_11ab22ccdc,
-          tags: tags,
-          // Add other input values here
-        }),
-      }
-    )
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response;
-      })
-      .then((data) => {
+    $.ajax({
+      url: "https://thisisfuture.us12.list-manage.com/subscribe/post-json?u=6b5a75b2e5f0566c42a9780d6&id=11ab22ccdc&c=?",
+      type: "GET",
+      data: formData,
+      dataType: "jsonp",
+      jsonp: "c",
+      success: function (response) {
+        // Handle success
+        console.log("Success:", response);
         setPersonalFormSuccess(true);
-        console.log("Success:", data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        setPersonalFormError(true);
+      },
+      error: function (xhr, status, error) {
+        // Handle error
         console.log("Error:", error);
-      });
+      },
+    });
+
+    // await fetch("./api/subscribe", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     FNAME: firstName,
+    //     EMAIL: email,
+    //     b_6b5a75b2e5f0566c42a9780d6_11ab22ccdc:
+    //       b_6b5a75b2e5f0566c42a9780d6_11ab22ccdc,
+    //     tags: tags,
+    //     // Add other input values here
+    //   }),
+    // })
+    //   .then((response) => {
+    //     if (!response.ok) {
+    //       throw new Error("Network response was not ok", response);
+    //     }
+    //     return response;
+    //   })
+    //   .then((data) => {
+    //     setPersonalFormSuccess(true);
+    //     console.log("Success:", data);
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error:", error);
+    //     setPersonalFormError(true);
+    //     console.log("Error:", error);
+    //   });
   };
   return (
     <>
@@ -313,6 +323,13 @@ export default function Home() {
                                   </div>
                                   <ErrorMessage name="EMAIL" component="div" />
                                   <ErrorMessage name="FNAME" component="div" />
+                                  {personalFormSuccess && (
+                                    <p
+                                      className={`${styles.paragraph} !text-dn-dark-green mt-4`}
+                                    >
+                                      Thanks for subscribing!
+                                    </p>
+                                  )}
                                 </div>
                               </Form>
                             </Formik>
