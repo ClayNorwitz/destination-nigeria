@@ -21,11 +21,26 @@ import { Dialog, Transition } from "@headlessui/react";
 import styles from "./styles";
 import { useRouter } from "next/router";
 import ProjectHighlights from "@/components/home/projectHighlights";
+import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
+import * as Yup from "yup";
 
 // import { useReducer } from "react";
 import { SlideContext } from "../context/SlideContext";
 
 // export const SlideContext = createContext(0);
+
+const personalFormSchema = Yup.object().shape({
+  FNAME: Yup.string()
+    .required("First name is required")
+    .min(2, "First name must be at least 2 characters long")
+    .max(50, "First name must be less than 50 characters"),
+  EMAIL: Yup.string()
+    .required("Email is required")
+    .email("Enter a valid email"),
+  tags: Yup.string(),
+  b_6b5a75b2e5f0566c42a9780d6_11ab22ccdc: Yup.string(),
+  // Add other fields here
+});
 
 const useShareableState = () => {
   const [currentSlide, SetCurrentSlide] = useState(0);
@@ -91,6 +106,66 @@ export default function Home() {
   const [currentSlide, SetCurrentSlide] = useState(0);
   const [open, setOpen] = useState(false);
   const cancelButtonRef = useRef(null);
+  const [personalFormError, setPersonalFormError] = useState(false);
+  const [personalFormSuccess, setPersonalFormSuccess] = useState(false);
+
+  const handlePersonalFormSubmit = async (values) => {
+    console.log("VALUES", values);
+    setPersonalFormSuccess(false);
+    setPersonalFormError(false);
+
+    const firstName = values.FNAME;
+    const email = values.EMAIL;
+    const b_6b5a75b2e5f0566c42a9780d6_11ab22ccdc =
+      values.b_6b5a75b2e5f0566c42a9780d6_11ab22ccdc;
+    const tags = values.tags;
+
+    console.log("TAGS", tags);
+
+    alert("TAGS", tags);
+    alert(
+      JSON.stringify({
+        FNAME: firstName,
+        EMAIL: email,
+        b_6b5a75b2e5f0566c42a9780d6_11ab22ccdc:
+          b_6b5a75b2e5f0566c42a9780d6_11ab22ccdc,
+        tags: tags,
+      })
+    );
+
+    await fetch(
+      "https://thisisfuture.us12.list-manage.com/subscribe/post?u=6b5a75b2e5f0566c42a9780d6&amp;id=11ab22ccdc&amp;f_id=00904be0f0",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          FNAME: firstName,
+          EMAIL: email,
+          b_6b5a75b2e5f0566c42a9780d6_11ab22ccdc:
+            b_6b5a75b2e5f0566c42a9780d6_11ab22ccdc,
+          tags: tags,
+          // Add other input values here
+        }),
+      }
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response;
+      })
+      .then((data) => {
+        setPersonalFormSuccess(true);
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        setPersonalFormError(true);
+        console.log("Error:", error);
+      });
+  };
   return (
     <>
       <div className="relative h-full">
@@ -168,46 +243,79 @@ export default function Home() {
                         <div className="">
                           <div className="mx-auto max-w-7xl ">
                             <div className="max-w-2xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"></div>
-                            <form className="mt-4 max-w-md">
-                              <div className="flex gap-x-4">
-                                <div className="grid grid-cols-2">
-                                  <label htmlFor="name" className="sr-only">
-                                    Name
-                                  </label>
-                                  <input
-                                    id="email-address"
-                                    name="name"
-                                    type="text"
-                                    autoComplete="name"
-                                    required
-                                    className={`${styles.paragraph} col-span-2 md:col-span-1 min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-dn-dark-green sm:text-sm sm:leading-6`}
-                                    placeholder="Full Name"
-                                  />
-                                  <label
-                                    htmlFor="email-address"
-                                    className="sr-only"
-                                  >
-                                    Email address
-                                  </label>
-                                  <input
-                                    id="email-address"
-                                    name="email"
-                                    type="email"
-                                    autoComplete="email"
-                                    required
-                                    className={`${styles.paragraph} col-span-2 md:col-span-1 min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-dn-dark-green sm:text-sm sm:leading-6`}
-                                    placeholder="Email Address"
-                                  />
-                                </div>
+                            <Formik
+                              initialValues={{
+                                FNAME: "",
+                                EMAIL: "",
+                                b_6b5a75b2e5f0566c42a9780d6_11ab22ccdc: "",
+                                tags: "10557863",
+                              }}
+                              validationSchema={personalFormSchema}
+                              onSubmit={handlePersonalFormSubmit}
+                            >
+                              <Form>
+                                <div>
+                                  <div className="hidden">
+                                    <Field type="number" name="tags" />
+                                  </div>
+                                  <div aria-hidden="true" className="hidden">
+                                    /* real people should not fill this in and
+                                    expect good things - do not remove this or
+                                    risk form bot signups */
+                                    <Field
+                                      type="text"
+                                      name="b_6b5a75b2e5f0566c42a9780d6_11ab22ccdc"
+                                      tabIndex="-1"
+                                      value=""
+                                    />
+                                  </div>
+                                  <div className="flex gap-x-4 mt-4 max-w-md">
+                                    <div className="grid grid-cols-2 gap-10">
+                                      <label htmlFor="name" className="sr-only">
+                                        Name
+                                      </label>
+                                      <div className="col-span-2 md:col-span-1">
+                                        <Field
+                                          id="mce-FNAME"
+                                          name="FNAME"
+                                          type="text"
+                                          autoComplete="name"
+                                          required
+                                          className={`${styles.paragraph}  min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-dn-dark-green sm:text-sm sm:leading-6`}
+                                          placeholder="Full Name"
+                                        />
+                                      </div>
+                                      <label
+                                        htmlFor="EMAIL"
+                                        className="sr-only"
+                                      >
+                                        Email address
+                                      </label>
+                                      <div className="col-span-2 md:col-span-1">
+                                        <Field
+                                          name="EMAIL"
+                                          id="mce-EMAIL"
+                                          type="email"
+                                          autoComplete="email"
+                                          required
+                                          className={`${styles.paragraph}  min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-dn-dark-green sm:text-sm sm:leading-6`}
+                                          placeholder="Email Address"
+                                        />
+                                      </div>
+                                    </div>
 
-                                <button
-                                  type="submit"
-                                  className={`${styles.paragraph} uppercase flex-none rounded-md bg-dn-dark-green px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-dn-dark-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dn-dark-green`}
-                                >
-                                  Subscribe
-                                </button>
-                              </div>
-                            </form>
+                                    <button
+                                      type="submit"
+                                      className={`${styles.paragraph} ml-4 uppercase flex-none rounded-md bg-dn-dark-green px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-dn-dark-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dn-dark-green`}
+                                    >
+                                      Subscribe
+                                    </button>
+                                  </div>
+                                  <ErrorMessage name="EMAIL" component="div" />
+                                  <ErrorMessage name="FNAME" component="div" />
+                                </div>
+                              </Form>
+                            </Formik>
                           </div>
                         </div>
                       </div>
