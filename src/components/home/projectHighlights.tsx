@@ -19,14 +19,14 @@ export default function ProjectHighlights({ setOpen }: { setOpen: any }) {
             Current project <span className="text-dn-blue">highlights</span>
           </h2>
         </div>
-        <div className="flex max-w-6xl space-x-16">
+        <div className="flex w-64 md:w-full lg:max-w-6xl space-x-2 lg:space-x-16 ">
           <div className="bg-white shadow-md border border-dn-beige flex-1 ">
-            <div className="abuja-city-bg h-48 flex items-center px-10">
+            <div className="abuja-city-bg h-20 md:h-48 flex items-center px-4 lg:px-10">
               <h3 className={`${styles.h3} !mb-0 text-white`}>
                 ABUJA CREATIVE CITY
               </h3>
             </div>
-            <div className="p-10 space-y-2">
+            <div className="p-4 lg:p-10 space-y-2">
               <p className={`${styles.paragraph} text-black text-sm`}>
                 The Abuja Creative City will not just be a landmark for Nigeria
                 but for the entire African continent.
@@ -51,13 +51,13 @@ export default function ProjectHighlights({ setOpen }: { setOpen: any }) {
               </div>
             </div>
           </div>
-          <div className="bg-white shadow-md border border-dn-beige flex-1">
-            <div className="visual-arts-bg h-48 flex items-center px-10">
+          <div className="bg-white shadow-md border border-dn-beige md:block flex-1 hidden">
+            <div className="visual-arts-bg h-20 md:h-48 flex items-center px-4 lg:px-10">
               <h3 className={`${styles.h3} !mb-0 text-white`}>
                 CENTRE OF VISUAL ARTS
               </h3>
             </div>
-            <div className="p-10 space-y-2">
+            <div className="p-4 lg:p-10 space-y-2">
               <p className={`${styles.paragraph} text-black text-sm`}>
                 This Nigerian Destination is a bold step towards celebrating,
                 preserving, and amplifying Nigeria&apos;s rich tapestry of arts,

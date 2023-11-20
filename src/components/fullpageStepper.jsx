@@ -50,7 +50,7 @@ function FullpageStepper() {
   return (
     <section className=" pointer-events-none">
       <ul
-        className={`${stepperColour} transition-all duration-1000 w-fit pl-10  p-6 flex flex-col   space-y-7 `}
+        className={`${stepperColour} transition-all duration-1000 w-fit md:pl-10 p-[1.1rem]  md:p-6 flex flex-col space-y-2 md:space-y-5 lg:space-y-7 `}
       >
         <li className="stepper-item  flex items-center justify-center ">
           <span className="text-white font-poppins">01</span>

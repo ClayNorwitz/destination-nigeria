@@ -4,11 +4,12 @@ import styles from "@/app/styles";
 export default function CreativeEconomy() {
   return (
     <div className="relative bg-white h-full w-full">
+      <div className="bg-dn-orange h-full lg:h-2/3 2xl:h-1/2  w-14 md:w-1/4 absolute top-1/2 -translate-y-1/2 lg:right-0"></div>
       <div
         className={`grid grid-cols-2 items-center justify-center h-full ${styles.boxWidth}`}
       >
-        <div className="col-span-2 lg:col-span-1 lg:pl-36 relative pt-16 lg:pt-0">
-          <h2 className={`${styles.h2} mb-10 text-black`}>
+        <div className="col-span-2 lg:col-span-1 pl-14  md:pl-36 relative  lg:pt-0">
+          <h2 className={`${styles.h2} lg:!mb-10 text-black`}>
             The <span className="text-dn-orange">creative economy</span>
           </h2>
           <div className="space-y-2">
@@ -26,9 +27,7 @@ export default function CreativeEconomy() {
             </p>
           </div>
         </div>
-        <div className="col-span-2 lg:col-span-1 flex lg:justify-center">
-          <div className="bg-dn-orange h-2/3 2xl:h-1/2  w-1/4 absolute top-1/2 -translate-y-1/2 right-0"></div>
-
+        <div className="col-span-2 lg:col-span-1 flex md:justify-center">
           <div className="relative ">
             <Image
               src="/img/woman-covering-face.jpg"

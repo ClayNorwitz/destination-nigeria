@@ -126,17 +126,17 @@ export default function Hero({ setOpen }: HeroProps) {
         <div className="flex-1"></div>
         {/* Main Content */}
         <div className="flex-1 grid grid-cols-4">
-          <div className="col-span-1 lg:flex hidden"></div>
-          <div className="col-span-4 lg:col-span-2 flex justify-end ">
+          <div className="col-span-1 md:flex hidden"></div>
+          <div className="col-span-4 md:col-span-2 flex justify-end ">
             <h1
               ref={titleRef}
-              className={`${styles.h1} !mb-0 text-white text-right md:!text-[10rem] md:!leading-[8rem] p-4 lg:p-0 lg:pt-4 max-w-lg `}
+              className={`${styles.h1} !mb-0 text-white text-right  md:!text-[7.3rem] md:!leading-[7rem]  lg:!text-[10rem] lg:!leading-[8rem] p-4 lg:p-0 lg:pt-4 max-w-sm md:max-w-lg`}
             >
               Nigeria <span className="block">every</span>
               <span className="block">where</span>
             </h1>
           </div>
-          <div className="hidden lg:col-span-1 bg-dn-green w-full h-full lg:flex items-center justify-center p-4">
+          <div className="hidden md:col-span-1 bg-dn-green w-full h-full md:flex items-center justify-center p-4">
             <Image
               src="/img/destination-nigeria-logo-green.png"
               width={328}
