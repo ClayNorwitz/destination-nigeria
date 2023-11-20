@@ -22,21 +22,13 @@ export async function POST(request) {
       }
     );
 
-    console.log("GEtting response");
-
     if (!response.ok) {
       console.log("response not ok");
       throw new Error(`Error: ${response.status}`);
     }
 
-    console.log("GOT response");
-
-    const error = await response.text();
-    console.log(error);
     // Send back the response
     const data = await response.json();
-
-    console.log("GOT response 2");
     return NextResponse.json({ data: data }, { status: 200 });
   } catch (error) {
     console.log(error);
