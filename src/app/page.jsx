@@ -77,10 +77,7 @@ const FullpageWrapper = ({ SetCurrentSlide, setOpen }) => {
             {popoverOpen && (
               <div>
                 <div className="fixed h-2/3 w-2/3 xl:h-1/3 xl:w-1/3 top-1/2 -translate-x-1/2 xl:-translate-y-[100%] -translate-y-[50%] left-1/2 z-50 ">
-                  <a
-                    target="_blank"
-                    href="https://www.paperlesspost.com/go/b0dGKBGIkbm8GQFqAMA6V/pp_g/preview9cd89b62bfa14b26bad62d58d4bcbe6f?utm_content=view_card&utm_source=cof&utm_medium=email"
-                  >
+                  <a target="_blank" href="https://pp.events/av70KWOo">
                     <Image
                       src="/img/banner-2.jpg"
                       width={1000}
