@@ -60,6 +60,7 @@ const FullScreenSection = ({ children }) => {
 };
 
 const FullpageWrapper = ({ SetCurrentSlide, setOpen }) => {
+  const [popoverOpen, setPopoverOpen] = useState(true);
   return (
     <ReactFullpage
       licenseKey={"K33GH-CR597-09KK8-01PJK-OJTQP"}
@@ -73,6 +74,46 @@ const FullpageWrapper = ({ SetCurrentSlide, setOpen }) => {
       render={({ state, fullpageApi }) => {
         return (
           <div className="h-full relative">
+            {popoverOpen && (
+              <div>
+                <div className="fixed h-2/3 w-2/3 xl:h-1/3 xl:w-1/3 top-1/2 -translate-x-1/2 xl:-translate-y-[100%] -translate-y-[50%] left-1/2 z-50 ">
+                  <a
+                    target="_blank"
+                    href="https://www.paperlesspost.com/go/b0dGKBGIkbm8GQFqAMA6V/pp_g/preview9cd89b62bfa14b26bad62d58d4bcbe6f?utm_content=view_card&utm_source=cof&utm_medium=email"
+                  >
+                    <Image
+                      src="/img/banner.jpg"
+                      width={1000}
+                      height={1000}
+                      alt="Picture of a person singing"
+                      className="object-cover mx-auto"
+                    />
+                  </a>
+                  <span
+                    onClick={() => {
+                      setPopoverOpen(false);
+                    }}
+                    className="absolute top-4 right-4 w-12 h-12 text-white cursor-pointer"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="size-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div className="fixed h-screen w-full bg-black/90 top-0 left-0 z-40"></div>
+              </div>
+            )}
             <FullScreenSection>
               <Hero setOpen={setOpen} />
             </FullScreenSection>
