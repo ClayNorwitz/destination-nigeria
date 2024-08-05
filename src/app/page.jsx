@@ -82,7 +82,7 @@ const FullpageWrapper = ({ SetCurrentSlide, setOpen }) => {
                     href="https://www.paperlesspost.com/go/b0dGKBGIkbm8GQFqAMA6V/pp_g/preview9cd89b62bfa14b26bad62d58d4bcbe6f?utm_content=view_card&utm_source=cof&utm_medium=email"
                   >
                     <Image
-                      src="/img/banner.jpg"
+                      src="/img/banner-2.jpg"
                       width={1000}
                       height={1000}
                       alt="Picture of a person singing"
