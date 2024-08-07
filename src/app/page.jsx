@@ -60,7 +60,7 @@ const FullScreenSection = ({ children }) => {
 };
 
 const FullpageWrapper = ({ SetCurrentSlide, setOpen }) => {
-  const [popoverOpen, setPopoverOpen] = useState(true);
+  const [popoverOpen, setPopoverOpen] = useState(false);
   return (
     <ReactFullpage
       licenseKey={"K33GH-CR597-09KK8-01PJK-OJTQP"}
