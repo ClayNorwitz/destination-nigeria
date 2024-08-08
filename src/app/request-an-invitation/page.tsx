@@ -1,16 +1,26 @@
 import React from "react";
 import styles from "../styles";
+import Image from "next/image";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 const page = () => {
   return (
     <main className="bg-gray-200">
+      <div className="bg-violet-400 ">
+        <Image
+          src="/img/header.jpg"
+          width={1920}
+          height={598}
+          alt="Picture of a person singing"
+          className="object-cover mx-auto"
+        />
+      </div>
       <div className={`${styles.boxWidth} py-20`}>
-        <h2
+        {/* <h2
           className={`${styles.h2} !mb-0 bg-dn-dark-green text-white p-20 text-center`}
         >
           A Cultural Experience Brought to You by <br></br>Destination 2030-
           Nigeria Everywhere
-        </h2>
+        </h2> */}
         <div className="bg-white p-5">
           <h1 className={`${styles.h3} mt-10`}>Request an Invitation</h1>
           <p className={`${styles.paragraph} max-w-6xl`}>
@@ -28,6 +38,13 @@ const page = () => {
             method="POST"
             className="mt-10"
           >
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value="Thank you for requesting an invitation to our exclusive cultural experience on the sidelines of the United Nations General Assembly.  
+Our team will review your request and get back to you soon with further information.
+We look forward to the possibility of having you join us for this extraordinary event!"
+            ></input>
             <div className="space-y-12 sm:space-y-16">
               <div>
                 <div className="mt-10 space-y-8 border-b border-gray-900/10 pb-12 sm:space-y-0 sm:divide-y sm:divide-gray-900/10 sm:border-t sm:pb-0">
@@ -36,7 +53,7 @@ const page = () => {
                       htmlFor="first-name"
                       className={`${styles.paragraph}`}
                     >
-                      First name
+                      First Name
                     </label>
                     <div className="mt-2 sm:col-span-2 sm:mt-0">
                       <input
@@ -55,7 +72,7 @@ const page = () => {
                       htmlFor="last-name"
                       className={`${styles.paragraph}`}
                     >
-                      Last name
+                      Last Name
                     </label>
                     <div className="mt-2 sm:col-span-2 sm:mt-0">
                       <input
@@ -71,7 +88,7 @@ const page = () => {
 
                   <div className="sm:grid sm:grid-cols-3 sm:items-start sm:gap-4 sm:py-6">
                     <label htmlFor="email" className={`${styles.paragraph}`}>
-                      Email address
+                      Email Address
                     </label>
                     <div className="mt-2 sm:col-span-2 sm:mt-0">
                       <input
@@ -162,7 +179,7 @@ const page = () => {
                         htmlFor="requested-by"
                         className={`${styles.paragraph}`}
                       >
-                        Requested by
+                        Requested By
                       </label>
                       <p
                         className={`${styles.paragraph} italic text-gray-700 !text-sm mt-4 pr-6`}
