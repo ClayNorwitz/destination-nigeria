@@ -152,7 +152,7 @@ export default function Hero({ setOpen }: HeroProps) {
               {/* flip div */}
 
               <div
-                className="relative w-1/2  flex items-center justify-center "
+                className="relative w-3/5 xl:w-1/2  flex items-center justify-center "
                 style={{ perspective: 1000 }}
               >
                 <motion.div
