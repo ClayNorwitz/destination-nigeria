@@ -5,7 +5,7 @@ import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 const page = () => {
   return (
     <main className="bg-gray-200">
-      <div className="bg-violet-400 ">
+      <div>
         <Image
           src="/img/header.jpg"
           width={1920}

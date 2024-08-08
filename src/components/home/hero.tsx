@@ -4,6 +4,8 @@ import styles from "@/app/styles";
 import { useState, useRef, useEffect } from "react";
 import useIsomorphicLayoutEffect from "use-isomorphic-layout-effect";
 import { splitTitle } from "@/utils/gsap";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 type SocialIconProps = React.SVGProps<SVGSVGElement>;
 
@@ -92,6 +94,16 @@ export default function Hero({ setOpen }: HeroProps) {
   const containerRef = useRef(null);
   const titleRef = useRef(null);
   const pageRef = useRef<HTMLDivElement>(null);
+  const [flip, setFlip] = useState(true);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setFlip((prevFlip) => !prevFlip);
+    }, 5000);
+
+    // Clear interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
 
   useEffect(() => {
     if (pageRef.current) {
@@ -137,14 +149,52 @@ export default function Hero({ setOpen }: HeroProps) {
                   <span className="block">where</span>
                 </h1>
               </div>
+              {/* flip div */}
 
-              <div className=" bg-dn-green  flex items-center justify-center p-2 md:p-12">
-                <Image
-                  src="/img/destination-nigeria-logo-green.png"
-                  width={328}
-                  height={165}
-                  alt="Picture green and orange pattern"
-                />
+              <div
+                className="relative w-1/2  flex items-center justify-center "
+                style={{ perspective: 1000 }}
+              >
+                <motion.div
+                  className="absolute inset-0 bg-dn-green h-full"
+                  animate={{ rotateY: flip ? 180 : 0 }}
+                  transition={{ duration: 0.6 }}
+                  style={{
+                    transformStyle: "preserve-3d",
+                  }}
+                >
+                  <motion.div
+                    className="absolute inset-0 top-1/2 -translate-y-1/2 p-2 md:p-12  "
+                    style={{
+                      backfaceVisibility: "hidden",
+                    }}
+                  >
+                    <Image
+                      src="/img/destination-nigeria-logo-green.png"
+                      width={328}
+                      height={165}
+                      alt="Picture green and orange pattern"
+                    />
+                  </motion.div>
+
+                  <motion.div
+                    className="absolute inset-0 "
+                    style={{
+                      backfaceVisibility: "hidden",
+                      transform: "rotateY(180deg)",
+                    }}
+                  >
+                    <Link href="/request-an-invitation">
+                      <Image
+                        src="/img/banner-3.jpg"
+                        width={328}
+                        height={165}
+                        alt="Picture green and orange pattern"
+                        className="absolute top-1/2 -translate-y-1/2"
+                      />
+                    </Link>
+                  </motion.div>
+                </motion.div>
               </div>
             </div>
           </div>

@@ -170,3 +170,8 @@ body {
   height: 100%;
   /* Styles for your content */
 }
+
+.front-flip,
+.back-flip {
+  backface-visibility: hidden;
+}
