@@ -33,6 +33,15 @@ const page = () => {
             guarantee an invitation or attendance. We will review all requests
             and get back to you soon.
           </p>
+          <p className={`${styles.paragraph} max-w-6xl mt-6`}>
+            For enquiries, please contact us via email at{" "}
+            <a
+              className="font-bold underline"
+              href="mailto:admin@nigeriadestination2030.com"
+            >
+              admin@nigeriadestination2030.com
+            </a>
+          </p>
           <form
             action="https://formsubmit.co/admin@nigeriadestination2030.com"
             method="POST"
