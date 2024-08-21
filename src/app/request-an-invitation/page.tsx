@@ -7,7 +7,7 @@ const page = () => {
     <main className="bg-gray-200">
       <div>
         <Image
-          src="/img/header.jpg"
+          src="/img/sponsor-header.jpg"
           width={1920}
           height={598}
           alt="Picture of a person singing"

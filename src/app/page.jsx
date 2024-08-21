@@ -79,7 +79,7 @@ const FullpageWrapper = ({ SetCurrentSlide, setOpen }) => {
                 <div className="fixed h-2/3 w-2/3 xl:h-1/3 xl:w-1/3 top-1/2 -translate-x-1/2 xl:-translate-y-[100%] -translate-y-[50%] left-1/2 z-50 ">
                   <a target="_blank" href="/request-an-invitation">
                     <Image
-                      src="/img/banner-3.jpg"
+                      src="/img/sponsor-banner.jpg"
                       width={1000}
                       height={1000}
                       alt="Picture of a person singing"
