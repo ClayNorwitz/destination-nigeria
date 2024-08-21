@@ -186,7 +186,7 @@ export default function Hero({ setOpen }: HeroProps) {
                   >
                     <Link href="/request-an-invitation">
                       <Image
-                        src="/img/banner-3.jpg"
+                        src="/img/sponsor-banner.jpg"
                         width={328}
                         height={165}
                         alt="Picture green and orange pattern"
