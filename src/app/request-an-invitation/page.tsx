@@ -22,7 +22,9 @@ const page = () => {
           Nigeria Everywhere
         </h2> */}
         <div className="bg-white p-5">
-          <h1 className={`${styles.h3} mt-10`}>Request an Invitation</h1>
+          <h1 className={`${styles.h3} !text-black mt-10`}>
+            Request an Invitation
+          </h1>
           <p className={`${styles.paragraph} max-w-6xl`}>
             On the sidelines of the United Nations General Assembly in New York,
             this cultural experience will bring together policymakers, creators,
