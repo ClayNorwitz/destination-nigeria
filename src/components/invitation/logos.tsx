@@ -10,7 +10,7 @@ const Logos = () => {
             Creative Economy Strategic Partner
           </h3>
           <div className="flex gap-x-4">
-            <div className="bg-gray-200 h-28 w-full relative">
+            <div className="bg-white ring-gray-200 rounded ring-1 h-28 w-full relative">
               <Image
                 fill={true}
                 src="/img/logos/afreximbank_logo.jpeg"
@@ -18,7 +18,7 @@ const Logos = () => {
                 className="object-contain mix-blend-multiply p-2"
               />
             </div>
-            <div className="bg-gray-200 h-28 w-full relative">
+            <div className="bg-white ring-gray-200 rounded ring-1 h-28 w-full relative">
               <Image
                 fill={true}
                 src="/img/logos/CANEX-logo.png"
@@ -33,7 +33,7 @@ const Logos = () => {
             Industry Partners
           </h3>
           <div className="flex gap-x-4">
-            <div className="bg-gray-200 h-28 w-full relative">
+            <div className="bg-white ring-gray-200 rounded ring-1 h-28 w-full relative">
               <Image
                 fill={true}
                 src="/img/logos/NATIONAL-THEATRE.jpg"
@@ -41,7 +41,7 @@ const Logos = () => {
                 className="object-contain mix-blend-multiply p-2"
               />
             </div>
-            <div className="bg-gray-200 h-28 w-full relative">
+            <div className="bg-white ring-gray-200 rounded ring-1 h-28 w-full relative">
               <Image
                 fill={true}
                 src="/img/logos/CBAAC.png"
@@ -51,7 +51,7 @@ const Logos = () => {
             </div>
           </div>
           <div className="flex gap-x-4 mt-4">
-            <div className="bg-gray-200 h-28 w-full relative ">
+            <div className="bg-white ring-gray-200 rounded ring-1 h-28 w-full relative ">
               <Image
                 fill={true}
                 src="/img/logos/AFRIFF-OFFICIAL-LOGO-BLUE_edited.png"
@@ -59,7 +59,7 @@ const Logos = () => {
                 className="object-contain mix-blend-multiply p-2"
               />
             </div>
-            <div className="bg-gray-200 h-28 w-full relative">
+            <div className="bg-white ring-gray-200 rounded ring-1 h-28 w-full relative">
               <Image
                 fill={true}
                 src="/img/logos/NCAC.png"
@@ -74,7 +74,7 @@ const Logos = () => {
             Media Partners
           </h3>
           <div className="flex gap-x-4">
-            <div className="bg-gray-200 h-28 w-full relative">
+            <div className="bg-white ring-gray-200 rounded ring-1 h-28 w-full relative">
               <Image
                 fill={true}
                 src="/img/logos/Futuretech-Logo.png"
@@ -82,7 +82,7 @@ const Logos = () => {
                 className="object-contain mix-blend-multiply p-2"
               />
             </div>
-            <div className="bg-gray-200 h-28 w-full relative">
+            <div className="bg-white ring-gray-200 rounded ring-1 h-28 w-full relative">
               <Image
                 fill={true}
                 src="/img/logos/LIL-Plus-logo.png"

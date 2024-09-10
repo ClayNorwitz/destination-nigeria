@@ -12,7 +12,7 @@ const Highlights = () => {
   return (
     <div className={`${styles.boxWidth} pt-20`}>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
-        <div className="col-span-1 bg-gray-200 rounded p-6 flex items-center justify-center flex-col">
+        <div className="col-span-1  p-6 flex items-center justify-center flex-col">
           <div className="bg-dn-green rounded-full h-16 w-16 flex items-center justify-center">
             <UserGroupIcon className="h-8 w-8 text-white" />
           </div>
@@ -20,7 +20,7 @@ const Highlights = () => {
             Culture & The Economy Panels{" "}
           </h3>
         </div>
-        <div className="col-span-1 bg-gray-200 rounded p-6 flex items-center justify-center flex-col">
+        <div className="col-span-1  p-6 flex items-center justify-center flex-col">
           <div className="bg-dn-green rounded-full h-16 w-16 flex items-center justify-center">
             <PhotoIcon className="h-8 w-8 text-white" />
           </div>
@@ -28,7 +28,7 @@ const Highlights = () => {
             Art Exhibition
           </h3>
         </div>
-        <div className="col-span-1 bg-gray-200 rounded p-6 flex items-center justify-center flex-col">
+        <div className="col-span-1  p-6 flex items-center justify-center flex-col">
           <div className="bg-dn-green rounded-full h-16 w-16 flex items-center justify-center">
             <MusicalNoteIcon className="h-8 w-8 text-white" />
           </div>
@@ -36,7 +36,7 @@ const Highlights = () => {
             Musical Performances
           </h3>
         </div>
-        <div className="col-span-1 bg-gray-200 rounded p-6 flex items-center justify-center flex-col">
+        <div className="col-span-1  p-6 flex items-center justify-center flex-col">
           <div className="bg-dn-green rounded-full h-16 w-16 flex items-center justify-center">
             <TbHanger className="h-8 w-8 text-white" />
           </div>
@@ -44,7 +44,7 @@ const Highlights = () => {
             Fashion Showcase
           </h3>
         </div>
-        <div className="col-span-1 bg-gray-200 rounded p-6 flex items-center justify-center flex-col">
+        <div className="col-span-1  p-6 flex items-center justify-center flex-col">
           <div className="bg-dn-green rounded-full h-16 w-16 flex items-center justify-center">
             <GiForkKnifeSpoon className="h-8 w-8 text-white" />
           </div>
@@ -52,7 +52,7 @@ const Highlights = () => {
             Culinary Exhibition
           </h3>
         </div>
-        <div className="col-span-1 bg-gray-200 rounded p-6 flex items-center justify-center flex-col">
+        <div className="col-span-1  p-6 flex items-center justify-center flex-col">
           <div className="bg-dn-green rounded-full h-16 w-16 flex items-center justify-center">
             <LuNetwork className="h-8 w-8 text-white" />
           </div>
