@@ -5,11 +5,11 @@ const Logos = () => {
   return (
     <div className={`${styles.boxWidth} py-20`}>
       <div className="grid grid-cols-1  lg:grid-cols-3 gap-10">
-        <div className="col-span-1">
-          <h3 className={`${styles.h4} !text-3xl !text-dn-green`}>
+        <div className="col-span-1 flex flex-col items-center ">
+          <h3 className={`${styles.h3} !text-3xl !text-dn-green`}>
             Creative Economy Strategic Partner
           </h3>
-          <div className="flex gap-x-4">
+          <div className="flex gap-x-4 w-full">
             <div className="bg-white  rounded  h-28 w-full relative">
               <Image
                 fill={true}
@@ -28,11 +28,11 @@ const Logos = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-1">
+        <div className="col-span-1 flex flex-col items-center">
           <h3 className={`${styles.h4} !text-3xl !text-dn-green`}>
             Industry Partners
           </h3>
-          <div className="flex gap-x-4">
+          <div className="flex gap-x-4 w-full">
             <div className="bg-white  rounded  h-28 w-full relative">
               <Image
                 fill={true}
@@ -69,11 +69,11 @@ const Logos = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-1">
-          <h3 className={`${styles.h4} !text-3xl !text-dn-green`}>
+        <div className="col-span-1 flex flex-col items-center ">
+          <h3 className={`${styles.h4} !text-3xl !text-dn-green `}>
             Media Partners
           </h3>
-          <div className="flex gap-x-4">
+          <div className="flex gap-x-4 w-full">
             <div className="bg-white  rounded  h-28 w-full relative">
               <Image
                 fill={true}
@@ -92,12 +92,14 @@ const Logos = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-1">
+        <div className="col-span-1"></div>
+        <div className="col-span-1 flex items-center flex-col ">
           <h3 className={`${styles.h4} !text-3xl !text-dn-green`}>
-            Official Beverage Partners
+            Official Beverage Partner
           </h3>
-          <div className="flex gap-x-4">
-            <div className="bg-white  rounded  h-28 w-full relative flex-1">
+          <div className="flex w-full  items-end gap-x-4">
+            <div className=""></div>
+            <div className="bg-white  rounded  h-44 w-full relative flex-1">
               <Image
                 fill={true}
                 src="/img/logos/STAR-BEER-USA.jpg"
@@ -105,7 +107,7 @@ const Logos = () => {
                 className="object-contain  p-2"
               />
             </div>
-            <div className="flex-1"></div>
+            <div className=""></div>
           </div>
         </div>
       </div>
