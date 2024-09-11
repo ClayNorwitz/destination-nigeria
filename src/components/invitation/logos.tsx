@@ -50,7 +50,7 @@ const Logos = () => {
               />
             </div>
           </div>
-          <div className="flex gap-x-4 mt-4">
+          <div className="flex gap-x-4 mt-4 w-full">
             <div className="bg-white  rounded  h-28 w-full relative ">
               <Image
                 fill={true}
