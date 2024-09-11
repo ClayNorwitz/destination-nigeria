@@ -77,7 +77,7 @@ const Logos = () => {
             <div className="bg-white ring-gray-200 rounded ring-1 h-28 w-full relative">
               <Image
                 fill={true}
-                src="/img/logos/Futuretech-Logo.png"
+                src="/img/logos/Futuretech-Logo-Icon-electric-dark-blue.png"
                 alt="Picture of Futuretech logo"
                 className="object-contain mix-blend-multiply p-2"
               />
@@ -85,11 +85,27 @@ const Logos = () => {
             <div className="bg-white ring-gray-200 rounded ring-1 h-28 w-full relative">
               <Image
                 fill={true}
-                src="/img/logos/LIL-Plus-logo.png"
+                src="/img/logos/LIL-Plus.png"
                 alt="Picture of Lost in Lagos logo"
                 className="object-contain  p-2"
               />
             </div>
+          </div>
+        </div>
+        <div className="col-span-1">
+          <h3 className={`${styles.h4} !text-3xl !text-dn-green`}>
+            Official Beverage Partners
+          </h3>
+          <div className="flex gap-x-4">
+            <div className="bg-white ring-gray-200 rounded ring-1 h-28 w-full relative flex-1">
+              <Image
+                fill={true}
+                src="/img/logos/STAR-BEER-USA.jpg"
+                alt="Picture of Star Beer logo"
+                className="object-contain  p-2"
+              />
+            </div>
+            <div className="flex-1"></div>
           </div>
         </div>
       </div>
