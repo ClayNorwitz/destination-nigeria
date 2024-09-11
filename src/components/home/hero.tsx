@@ -184,7 +184,7 @@ export default function Hero({ setOpen }: HeroProps) {
                       transform: "rotateY(180deg)",
                     }}
                   >
-                    <Link href="/request-an-invitation">
+                    <Link href="/invitation">
                       <Image
                         src="/img/sponsor-banner.jpg"
                         width={328}

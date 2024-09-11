@@ -77,7 +77,7 @@ const FullpageWrapper = ({ SetCurrentSlide, setOpen }) => {
             {popoverOpen && (
               <div>
                 <div className="fixed h-2/3 w-2/3 xl:h-1/3 xl:w-1/3 top-1/2 -translate-x-1/2 xl:-translate-y-[100%] -translate-y-[50%] left-1/2 z-50 ">
-                  <a target="_blank" href="/request-an-invitation">
+                  <a target="_blank" href="/invitation">
                     <Image
                       src="/img/sponsor-banner.jpg"
                       width={1000}
