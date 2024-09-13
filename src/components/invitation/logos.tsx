@@ -92,24 +92,6 @@ const Logos = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-1"></div>
-        <div className="col-span-1 flex items-center flex-col ">
-          <h3 className={`${styles.h4} !text-3xl !text-dn-green`}>
-            Official Beverage Partner
-          </h3>
-          <div className="flex w-full  items-end gap-x-4">
-            <div className=""></div>
-            <div className="bg-white  rounded  h-44 w-full relative flex-1">
-              <Image
-                fill={true}
-                src="/img/logos/STAR-BEER-USA.jpg"
-                alt="Picture of Star Beer logo"
-                className="object-contain  p-2"
-              />
-            </div>
-            <div className=""></div>
-          </div>
-        </div>
       </div>
     </div>
   );
