@@ -60,7 +60,7 @@ const FullScreenSection = ({ children }) => {
 };
 
 const FullpageWrapper = ({ SetCurrentSlide, setOpen }) => {
-  const [popoverOpen, setPopoverOpen] = useState(true);
+  // const [popoverOpen, setPopoverOpen] = useState(true);
   return (
     <ReactFullpage
       licenseKey={"K33GH-CR597-09KK8-01PJK-OJTQP"}
@@ -74,7 +74,7 @@ const FullpageWrapper = ({ SetCurrentSlide, setOpen }) => {
       render={({ state, fullpageApi }) => {
         return (
           <div className="h-full relative">
-            {popoverOpen && (
+            {/* {popoverOpen && (
               <div>
                 <div className="fixed h-2/3 w-2/3 xl:h-1/3 xl:w-1/3 top-1/2 -translate-x-1/2 xl:-translate-y-[100%] -translate-y-[50%] left-1/2 z-50 ">
                   <a target="_blank" href="/invitation">
@@ -110,7 +110,7 @@ const FullpageWrapper = ({ SetCurrentSlide, setOpen }) => {
                 </div>
                 <div className="fixed h-screen w-full bg-black/90 top-0 left-0 z-40"></div>
               </div>
-            )}
+            )} */}
             <FullScreenSection>
               <Hero setOpen={setOpen} />
             </FullScreenSection>

@@ -151,18 +151,8 @@ export default function Hero({ setOpen }: HeroProps) {
               </div>
               {/* flip div */}
 
-              <div
-                className="relative w-3/5 xl:w-1/2  flex items-center justify-center "
-                style={{ perspective: 1000 }}
-              >
-                <motion.div
-                  className="absolute inset-0 bg-dn-green h-full"
-                  animate={{ rotateY: flip ? 180 : 0 }}
-                  transition={{ duration: 0.6 }}
-                  style={{
-                    transformStyle: "preserve-3d",
-                  }}
-                >
+              <div className="relative w-3/5 xl:w-1/2  flex items-center justify-center ">
+                <div className="absolute inset-0 bg-dn-green h-full">
                   <motion.div
                     className="absolute inset-0 top-1/2 -translate-y-1/2 p-2 md:p-12  "
                     style={{
@@ -177,7 +167,7 @@ export default function Hero({ setOpen }: HeroProps) {
                     />
                   </motion.div>
 
-                  <motion.div
+                  {/* <motion.div
                     className="absolute inset-0 "
                     style={{
                       backfaceVisibility: "hidden",
@@ -193,8 +183,8 @@ export default function Hero({ setOpen }: HeroProps) {
                         className="absolute top-1/2 -translate-y-1/2"
                       />
                     </Link>
-                  </motion.div>
-                </motion.div>
+                  </motion.div> */}
+                </div>
               </div>
             </div>
           </div>
